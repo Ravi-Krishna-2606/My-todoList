@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1><%= listTitle %></h1>
+      <ul>
+        <% newListItems.forEach(function (item) { %>
+          <li><%= item.name %></li>
+        <% }) %>
+      </ul>
+      <form action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item">
+        <button type="submit">+</button>
+      </form>
+    </div>
+  </body>
+</html>
